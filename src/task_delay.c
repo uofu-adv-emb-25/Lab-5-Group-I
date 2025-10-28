@@ -8,6 +8,8 @@ void main_task(__unused void *params)
     int toggle = 0;
     while (1) {
         toggle = !toggle;
+        for(int i =0; i < 50000000; i++){
+        }
         gpio_put(OUT_PIN, toggle);
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
     }

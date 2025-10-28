@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <pico/stdlib.h>
 
+
 int main(void)
 {
     int toggle = 0;
@@ -11,6 +12,8 @@ int main(void)
 
     while (true) {
         toggle = !toggle;
+        for(int i =0; i < 5000000; i++){
+        }
         gpio_put(OUT_PIN, toggle);
         sleep_ms(DELAY_MS);
     }

@@ -25,6 +25,9 @@ int main(void)
     gpio_set_dir(OUT_PIN, GPIO_OUT);
     gpio_put(OUT_PIN, toggle);
 
+    for(int i =0; i < 5000000; i++){
+        }
+
     add_repeating_timer_ms(-DELAY_MS, timer_callback, NULL, &timer);
     while(1) __nop();
     return 0;
